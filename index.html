@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function login () {
+        let data = {
+  email: "",
+  password: "", 
+ 
+}
+
+fetch('http://localhost:5000/register', {
+  method: "POST",
+  body: JSON.stringify(_data),
+  headers: {"Content-type": "application/json; charset=UTF-8"}
+})
+.then(response => response.json()) 
+.then(json => console.log(json));
+}
+// (err => console.log(err));
+    </script>
+</head>
+
+<body>
+    <header class="header"></header>
+
+    <div class="login-form-container">
+        <form action="">
+            <h3>user login</h3>
+            <input type="email" placeholder="email" class="box"  />
+            <input type="password" placeholder="password" class="box" />
+            <button class="btn" onclick={login()}>Login</button>
+        </form>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
